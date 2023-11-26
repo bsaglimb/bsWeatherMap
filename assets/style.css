@@ -1,5 +1,5 @@
 h1 {
-	background-color: darkgrey;
+	background-color: rgb(146, 224, 237);
 	text-align: center;
 }
 label {
@@ -39,6 +39,6 @@ label {
 	height: 70px;
 	width: 70px;
 }
-.TodaysDate {
+.todaysDate {
 	font-size: 20px;
 }

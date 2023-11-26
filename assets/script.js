@@ -15,7 +15,7 @@ $('.search').on("click", function (event) {
 	};
 	cityHistory.push(city);
 
-	localStorage.setItem('city', JSON.stringify(cityHist));
+	localStorage.setItem('city', JSON.stringify(cityHistory));
 	fiveDayForecastEl.empty();
 	getHistory();
 	getWeatherToday();
@@ -40,3 +40,4 @@ function getHistory() {
 	} if (!city) {
 		return;
 	}
+    
