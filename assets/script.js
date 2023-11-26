@@ -40,4 +40,11 @@ function getHistory() {
 	} if (!city) {
 		return;
 	}
-    
+    	//Allows the buttons to start a search as well
+	$('.historyBtn').on("click", function (event) {
+		event.preventDefault();
+		city = $(this).text();
+		fiveDayForecastEl.empty();
+		getWeatherToday();
+	});
+};
