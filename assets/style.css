@@ -10,10 +10,10 @@ label {
 .card {
 	margin: 10px;
 }
-.colOne {
+.columnOne {
 	background-color: white
 }
-.colTwo {
+.columnTwo {
 	background-color: rgb(255, 255, 255);
 }
 .histBtnRow {
@@ -39,6 +39,6 @@ label {
 	height: 70px;
 	width: 70px;
 }
-.cardTodayDate {
+.TodaysDate {
 	font-size: 20px;
 }
