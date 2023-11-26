@@ -49,3 +49,39 @@ function getHistory() {
 	});
 };
 
+//Grab the main 'Today' card body.
+var bodyToday = $('.bodyToday')
+//Applies the weather data to the today card and then launches the five day forecast
+function getWeatherToday() {
+	var getUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`;
+
+	$(bodyToday).empty();
+
+	$.ajax({
+		url: getUrlCurrent,
+		method: 'GET',
+	}).then(function (response) {
+		$('.todaysCityName').text(response.name);
+		$('.todaysDate').text(date);
+		//Icons
+		$('.icons').attr('src', `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`);
+		// Temperature
+		var pEl = $('<p>').text(`Temperature: ${response.main.temp} °F`);
+		bodyToday.append(pEl);
+		//Feels Like
+		var pElTemp = $('<p>').text(`Feels Like: ${response.main.feels_like} °F`);
+		bodyToday.append(pElTemp);
+		//Humidity
+		var pElHumid = $('<p>').text(`Humidity: ${response.main.humidity} %`);
+		bodyToday.append(pElHumid);
+		//Wind Speed
+		var pElWind = $('<p>').text(`Wind Speed: ${response.wind.speed} MPH`);
+		bodyToday.append(pElWind);
+		//Set the lat and long from the searched city
+		var cityLon = response.coord.lon;
+		// console.log(cityLon);
+		var cityLat = response.coord.lat;
+		// console.log(cityLat);
+        var getUrlUvi = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${cityLon}&exclude=hourly,daily,minutely&appid=${key}`;
+
+	
