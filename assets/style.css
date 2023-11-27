@@ -11,18 +11,15 @@ label {
 	margin: 10px;
 }
 .columnOne {
-	background-color: white
-}
-.columnTwo {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(240, 240, 240)
 }
 .histBtnRow {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 .green{
-  background-color: lightgreen;
-}
+	background-color: lightgreen;
+  }
 .yellow{
   background-color: yellow;
 }
