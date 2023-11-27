@@ -22,5 +22,5 @@
 
 ## Photo of deployed site
 
-![DemoPhoto] (./assets/bsWeatherMap.png)
+![DemoPhoto](./assets/bsWeatherMap.png)
 
