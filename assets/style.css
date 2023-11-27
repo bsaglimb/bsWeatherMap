@@ -13,9 +13,9 @@ label {
 .columnOne {
 	background-color: rgb(240, 240, 240)
 }
-.histBtnRow {
-	margin-top: 5px;
-	margin-bottom: 5px;
+.historyBtnRow {
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 .green{
 	background-color: lightgreen;
