@@ -68,9 +68,6 @@ function getWeatherToday() {
 		// Temperature
 		var pEl = $('<p>').text(`Temperature: ${response.main.temp} °F`);
 		bodyToday.append(pEl);
-		//Feels Like
-		var pElTemp = $('<p>').text(`Feels Like: ${response.main.feels_like} °F`);
-		bodyToday.append(pElTemp);
 		//Humidity
 		var pElHumid = $('<p>').text(`Humidity: ${response.main.humidity} %`);
 		bodyToday.append(pElHumid);
@@ -126,7 +123,7 @@ function getFiveDayForecast() {
 				date: value.dt_txt.split(' ')[0],
 				time: value.dt_txt.split(' ')[1],
 				temp: value.main.temp,
-				feels_like: value.main.feels_like,
+				wind: value.wind.speed,
 				icon: value.weather[0].icon,
 				humidity: value.main.humidity
 			}
@@ -135,7 +132,7 @@ function getFiveDayForecast() {
 				myWeather.push(testObj);
 			}
 		})
-        //Inject the cards to the screen 
+        //Place the cards on the screen 
 		for (let i = 0; i < myWeather.length; i++) {
 
 			var divElCard = $('<div>');
@@ -161,9 +158,9 @@ function getFiveDayForecast() {
 			//Temp
 			var pElTemp = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
 			divElBody.append(pElTemp);
-			//Feels Like
-			var pElFeel = $('<p>').text(`Feels Like: ${myWeather[i].feels_like} °F`);
-			divElBody.append(pElFeel);
+			//Wind
+			var pElWindSpeed = $('<p>').text(`Wind: ${myWeather[i].wind} MPH`);
+			divElBody.append(pElWindSpeed);
 			//Humidity
 			var pElHumid = $('<p>').text(`Humidity: ${myWeather[i].humidity} %`);
 			divElBody.append(pElHumid);
