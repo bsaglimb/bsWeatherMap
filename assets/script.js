@@ -40,7 +40,7 @@ function getHistory() {
 	} if (!city) {
 		return;
 	}
-    	//Allows the buttons to start a search as well
+    	//Allows the buttons to start a search 
 	$('.historyBtn').on("click", function (event) {
 		event.preventDefault();
 		city = $(this).text();
@@ -117,7 +117,6 @@ function getFiveDayForecast() {
 	}).then(function (response) {
 		var fiveDayArray = response.list;
 		var myWeather = [];
-		//Made a object that would allow for easier data read
 		$.each(fiveDayArray, function (index, value) {
 			testObj = {
 				date: value.dt_txt.split(' ')[0],
