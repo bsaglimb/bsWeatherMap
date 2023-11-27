@@ -9,7 +9,7 @@ var cityHistory = [];
 //Will save the text value of the search and save it to an array and storage
 $('.search').on("click", function (event) {
 	event.preventDefault();
-	city = $(this).parent('.btnPar').siblings('.textValue').val().trim();
+	city = $(this).parent('.btnP').siblings('.textValue').val().trim();
 	if (city === "") {
 		return;
 	};
